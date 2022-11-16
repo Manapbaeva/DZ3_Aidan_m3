@@ -73,7 +73,7 @@ setInterval(SlideSec, 1000)
 
 //Task 2
 
-openToScroll_End =()=> {
+scrollModal =()=> {
 
     window.addEventListener('scroll', () => {
 
@@ -81,9 +81,9 @@ openToScroll_End =()=> {
 
             const clientHeight = window.pageYOffset + document.documentElement.clientHeight;
 
-            const isScrollEnd = Math.abs(scrollHeight - clientHeight) < 10;
+            const ScrollEnd = Math.abs(scrollHeight - clientHeight) < 10;
 
-            if(isScrollEnd){
+            if(ScrollEnd){
                 openModal()
 
             }
@@ -91,6 +91,6 @@ openToScroll_End =()=> {
     )
 }
 
-window.addEventListener("scroll", openToScroll_End)
+window.addEventListener("scroll", scrollModal)
 
 setTimeout(openModal,4000)
